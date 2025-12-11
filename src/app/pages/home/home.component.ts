@@ -30484,7 +30484,6 @@ export class HomeComponent {
 
   filtrar() {
     const query = this.texto.trim();
-    console.log('Prueba', this.texto);
 
     if (query.length === 0) {
       this.resultados = [];
@@ -30492,13 +30491,11 @@ export class HomeComponent {
     }
 
     this.resultados = this.usuarios.filter((u) => u.identificaciN.toString().includes(query) ||
-    u.usuario.toLowerCase().includes(query));
+    u.usuario.toLowerCase().includes(query.toLowerCase()));
   }
 
   seleccionarUsuario(usuario: any) {
-    console.log('Usuario seleccionado:', usuario);
     this.texto = usuario.identificaciN + '-' + usuario.usuario;
     this.router.navigate(['/usuario', usuario.identificaciN]);
-    // Aquí rediriges a /usuario/identidad si quieres
   }
 }
