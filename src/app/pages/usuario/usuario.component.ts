@@ -3,7 +3,7 @@ import { AcudientesComponent } from "../../../components/acudientes/acudientes.c
 import { EstudiantesComponent } from "../../../components/estudiantes/estudiantes.component";
 import { EncabezadoComponent } from "../../../components/encabezado/encabezado.component";
 import { FirmaComponent } from "../../../components/firma/firma.component";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'usuario',
@@ -30478,9 +30478,10 @@ export class UsuarioComponent {
     },
   ];
 
-  id!: string; // o number
+  id!: string;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private router: Router) {}
+  
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id')!;
@@ -30495,5 +30496,9 @@ export class UsuarioComponent {
       (item) => item.identificaciN == this.id
     );
     console.log(this.registro);
+  }
+
+  volver(){
+    this.router.navigate(['/buscar']);
   }
 }
