@@ -30492,7 +30492,7 @@ export class UsuarioComponent {
 
   buscar() {
     this.registro = this.datos.find(
-      (item) => item.numeroDeDocumentoDeIdentidad == this.id
+      (item) => item.identificaciN == this.id
     );
     console.log(this.registro);
   }
