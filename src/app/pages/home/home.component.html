@@ -1,0 +1,20 @@
+<div class="front">
+  <h1>PREMASTRICULAS 2026</h1>
+  <div class="logo">
+    <img src="assets/logo.png" alt="logo" />
+  </div>
+  <h3>Esbriba el documento de identidad o el nombre del estudiante</h3>
+  <input
+    type="text"
+    [(ngModel)]="texto"
+    (input)="filtrar()"
+    placeholder="Escribe número de identidad..."
+    class="input"
+  />
+
+  <ul *ngIf="resultados.length > 0" class="lista">
+    <li *ngFor="let u of resultados" (click)="seleccionarUsuario(u)">
+      {{ u.usuario }} - {{ u.identificaciN }}
+    </li>
+  </ul>
+</div>

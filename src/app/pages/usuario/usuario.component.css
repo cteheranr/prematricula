@@ -1,0 +1,28 @@
+.container{
+    /* padding: 30px; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  @page {
+    size: 8.5in 13in;
+    margin: 8mm;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    page-break-after: avoid;
+    page-break-before: avoid;
+    page-break-inside: avoid;
+    transform: scale(1); /* Ajusta el zoom para que quepa */
+    transform-origin: top center;
+  }
+}

@@ -1,0 +1,49 @@
+.encabezado {
+  border: solid 1px black;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+}
+
+.text{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 55%;
+}
+
+.text p {
+  font-size: 11px;
+}
+
+.text h3 {
+  font-size: 12px;
+}
+
+p, h1, h2, h3, h4, h5 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.imagen, .logo {
+  width: 20%;
+}
+
+.logo img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.imagen img {
+  border: solid black 2px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.ficha { 
+  font-size: 20px !important;
+}
