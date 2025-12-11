@@ -64,6 +64,7 @@
     page-break-inside: avoid;
     transform: scale(1); /* Ajusta el zoom para que quepa */
     transform-origin: top center;
+    padding: 0px;
   }
 
   .no-print {
