@@ -4,14 +4,16 @@ import { Component, Input } from '@angular/core';
   selector: 'estudiante',
   standalone: true,
   templateUrl: './estudiantes.component.html',
-  styleUrl: './estudiantes.component.css'
+  styleUrl: './estudiantes.component.css',
 })
 export class EstudiantesComponent {
   title = 'prematricula';
-  partes: string[] = []
-    @Input() items: any = null;
-  
-    ngOnInit(): void {
-      this.partes = this.items.fechaDeNacimiento.split("-");
+  partes: string[] = ["_ _ _ _", "_ _", "_ _"];
+  @Input() items: any = null;
+
+  ngOnInit(): void {
+    if (typeof this.items.fechaDeNacimiento === 'string') {
+      this.partes = this.items.fechaDeNacimiento.split('-');
     }
+  }
 }
